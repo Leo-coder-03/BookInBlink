@@ -1,7 +1,7 @@
 package com.jts.movie.services;
 
 import com.jts.movie.Exceptions.MovieAlreadyExist;
-import com.jts.movie.converter.MovieConverter;
+import com.jts.movie.convertor.MovieConvertor;
 import com.jts.movie.entities.Movie;
 import com.jts.movie.repositories.MovieRepository;
 import com.jts.movie.request.MovieRequest;
@@ -19,7 +19,7 @@ public class MovieService {
         {
             throw new MovieAlreadyExist();
         }
-        Movie movie = MovieConverter.movieDtoToMovie(movieRequest);
+        Movie movie = MovieConvertor.movieDtoToMovie(movieRequest);
         movieRepository.save(movie);
         return "The movie has been added successfully";
     }

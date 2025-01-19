@@ -1,9 +1,9 @@
-package com.jts.movie.converter;
+package com.jts.movie.convertor;
 
 import com.jts.movie.entities.Movie;
 import com.jts.movie.request.MovieRequest;
 
-public class MovieConverter {
+public class MovieConvertor {
     public static Movie movieDtoToMovie(MovieRequest movieRequest)
     {
         Movie movie = Movie.builder()

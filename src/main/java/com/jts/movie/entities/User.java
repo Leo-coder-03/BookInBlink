@@ -32,6 +32,8 @@ public class User {
     private String mobileNo;
     @Column(unique = true)
     private String emailId;
+    private String password;
+    private String roles;
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Ticket> ticketList = new ArrayList<>();
 }
